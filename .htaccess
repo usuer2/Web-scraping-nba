@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteBase /scraping-nba/
+
+# Reescribir la URL amigable a la URL real para Plantilla
+RewriteRule ^Este/Atlantico/Plantilla/([a-zA-Z0-9_-]+)$ Plantilla.php?apodo=$1 [L,QSA]
+
+# Reescribir la URL para divisiones de conferencias (Este y Oeste)
+RewriteRule ^Oeste/([a-zA-Z0-9_\-]+)/?$ Divisiones.php?nombre=$1 [QSA,L]
+RewriteRule ^Este/([a-zA-Z0-9_\-]+)/?$ Divisiones.php?nombre=$1 [QSA,L]
+
+# Reescribir la URL para divisiones de conferencias con el parámetro "id"
+RewriteRule ^Oeste/([a-zA-Z0-9_\-]+)/([0-9]+)/?$ Divisiones.php?nombre=$1&id=$2 [L,QSA]
+RewriteRule ^Este/([a-zA-Z0-9_\-]+)/([0-9]+)/?$ Divisiones.php?nombre=$1&id=$2 [L,QSA]
+
+# Reescribir URLs de archivos PHP y HTML sin extensiones
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+
