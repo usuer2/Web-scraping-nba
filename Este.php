@@ -30,21 +30,6 @@
         background-repeat: no-repeat;
     }
 
-    .Atlantico {
-        display: inline-block;
-        text-align: center;
-        padding: 10px 20px;
-        color: #000;
-        border: 1px solid black;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .Atlantico:hover {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        transform: translateY(-2px);
-    }
 </style>
 
 <body>
@@ -74,7 +59,7 @@
             <!-- Product actions -->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
-                   <a id="' . $root . $row['id'] . '" class="Botones" href="' . $root . 'Este/' . urlencode(string: $row['nombre']) . '/' . $row['id'] . '">Seleccionar división</a>
+                   <a id="' . $root . $row['id'] . '" class="Botones" href="' . $root . 'este/' . urlencode(string: $row['nombre']) . '/' . $row['id'] . '">Seleccionar división</a>
                 </div> 
             </div>
         </div>

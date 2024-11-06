@@ -110,8 +110,8 @@
                         <!-- Product actions -->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center">
-                                <a id="' . $row['id'] . '" class="Botones" href="/scraping-nba/Este/Atlantico/Plantilla/' . urlencode($row['apodo']) . '">Seleccionar equipo</a>
-                            </div>
+                                <a id="' . $row['id'] . '" class="Botones" href="/scraping-nba/este/atlantico/plantilla/' . urlencode($row['apodo']) . '">Seleccionar equipo</a>
+                            </div> CAMBIAR EL NOMBRE DE LA URL DE ATLANTICO A EL SUYO
                         </div>
                     </div>
                 </div>';
